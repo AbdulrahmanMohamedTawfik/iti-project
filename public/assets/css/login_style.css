@@ -1,0 +1,86 @@
+/* login_style.css */
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.error {
+    color: #f00;
+    font-size: 14px;
+}
+
+.rounded-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.rounded-button:hover {
+    background-color: #0056b3;
+}
+
+.password-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle {
+    /* margin-left: 5px; Add space between the password input and the toggle */
+    padding: 5px;
+}
+
+/* Style the checkbox and label as needed */
+.password-toggle input[type="checkbox"] {
+    margin-right: 5px; /* Add space between the checkbox and label */
+}
