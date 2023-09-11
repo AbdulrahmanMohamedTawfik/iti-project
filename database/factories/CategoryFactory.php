@@ -18,6 +18,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'picture' => '1693224737.jpeg',
         ];
     }
 }

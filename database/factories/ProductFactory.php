@@ -24,6 +24,7 @@ class ProductFactory extends Factory
             'availability' => $this->faker->randomElement(['available', 'unavailable']),
             'category_id' => Category::factory(),
             'admin_id' => Admin::factory(),
+            'picture' => '1693224737.jpeg',
         ];
     }
 }

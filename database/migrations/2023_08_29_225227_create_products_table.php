@@ -17,7 +17,8 @@ return new class extends Migration
             $table->decimal('price', 8, 2);
             $table->string('availability');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('admin_id')->nullable();
+            $table->unsignedBigInteger('admin_id');
+            $table->string('picture');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('admin_id')->references('id')->on('admin');
             $table->timestamps();

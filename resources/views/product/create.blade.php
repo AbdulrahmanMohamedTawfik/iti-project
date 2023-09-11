@@ -12,12 +12,12 @@
         <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 @csrf
-                <input type="text" name="product_name" placeholder="product name">
-                <input class="btn btn-secondary" type="file" name="product_picture">
-                <input type="text" name="product_availability" placeholder="product availability">
-                <input type="text" name="product_price" placeholder="product price">
+                <input type="text" name="name" placeholder="product name">
+                <input type="text" name="price" placeholder="product price">
+                <input type="text" name="availability" placeholder="product availability">
                 <input type="text" name="category_id" placeholder="category id">
                 <input type="text" name="admin_id" placeholder="admin id">
+                <input class="btn btn-secondary" type="file" name="picture">
                 <br>
                 <br>
                 <button class="btn btn-primary" type="submit">Submit</button>

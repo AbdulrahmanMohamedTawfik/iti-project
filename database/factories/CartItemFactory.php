@@ -26,7 +26,8 @@ class CartItemFactory extends Factory
                 return Product::inRandomOrder()->first()->id;
             },
             'quantity' => $this->faker->numberBetween(1, 10),
-            'price' => $this->faker->numberBetween(1, 100),
+            'total_price' => $this->faker->numberBetween(1, 100),
+            // 'picture' => '1693224737.jpeg',
         ];
     }
 }

@@ -20,11 +20,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Category::factory()->count(10)->create();
-        Product::factory()->count(50)->create();
         Admin::factory()->count(1)->create();
-        User::factory()->count(30)->create();
-        Order::factory()->count(20)->create();
-        OrderItem::factory()->count(20)->create();
-        CartItem::factory()->count(20)->create();
+        User::factory()->count(10)->create();
+        Product::factory()->count(20)->create();
+        // Order::factory()->count(20)->create();
+        // OrderItem::factory()->count(20)->create();
+        CartItem::factory()->count(10)->create();
     }
 }

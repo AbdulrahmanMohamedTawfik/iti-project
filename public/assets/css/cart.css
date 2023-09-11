@@ -13,6 +13,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
 main {
@@ -25,7 +26,9 @@ main {
 
 .cart h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    /* padding-top: 10%; */
+    /* margin-top: 50px; */
 }
 
 .cart-items {
@@ -56,14 +59,14 @@ main {
     margin-top: 20px;
 }
 
-.checkout-button {
-    background-color: #333;
-    color: #fff;
+.remove-button {
+    background-color: #9d0202;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
 }
 
-.checkout-button:hover {
-    background-color: #555;
+.remove-button:hover {
+    background-color: #9d02027c;
 }

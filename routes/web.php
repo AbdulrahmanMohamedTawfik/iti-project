@@ -45,3 +45,4 @@ Route::view('/orders/create', 'orders.create')->name('orders.create');
 // Route::resource('/cart', CartController::class);
 Route::post('/cart/add/{productId}/{uid}', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart/{uid}', [CartController::class, 'index'])->name('cart.index');
+Route::delete('/cart/{cid}/{uid}', [CartController::class, 'destroy'])->name('cart.destroy');

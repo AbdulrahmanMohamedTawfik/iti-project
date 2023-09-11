@@ -7,6 +7,7 @@ use App\Models\CartItem;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CartController extends Controller
 {
@@ -17,7 +18,7 @@ class CartController extends Controller
     {
         $items = CartItem::with('product')->get();
         // $products = $items->products;
-        
+
         $user = User::find($uid);
         return view('cart.index', ['items' => $items], ['uid' => $user->id]);
     }
@@ -65,9 +66,13 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    function destroy($cid, $uid)
     {
-        //
+        $item = CartItem::find($cid);
+        $items = CartItem::with('product')->get();
+        $user = User::find($uid);
+        $item->delete();
+        return redirect()->route('cart.index', ['items' => $items, 'uid' => $user->id]);
     }
 
     // public function addToCart(Request $request, $productId)

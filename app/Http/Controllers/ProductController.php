@@ -38,26 +38,26 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         Storage::delete('images/' . $product->product_picture);
-        $image = $request->file('product_picture');
+        $image = $request->file('picture');
         $image_name = time() . '.' . $image->getClientOriginalExtension();
         $image->move('images', $image_name);
 
         $product->update($request->except('_method', '_token'));
-        DB::table('products')->where('product_id', $product->product_id)->update([
-            'product_picture' => $image_name
+        DB::table('products')->where('id', $product->id)->update([
+            'picture' => $image_name
         ]);
         return redirect()->route('product.index');
     }
 
     public function store(Request $request)
     {
-        $image = $request->file('product_picture');
+        $image = $request->file('picture');
         $image_name = time() . '.' . $image->getClientOriginalExtension();
         $image->move('images', $image_name);
 
         $product = Product::create($request->all());
-        DB::table('products')->where('product_id', $product->product_id)->update([
-            'product_picture' => $image_name
+        DB::table('products')->where('id', $product->id)->update([
+            'picture' => $image_name
         ]);
         return redirect()->route('product.index');
     }
